@@ -1,5 +1,5 @@
 {
-    "port":"8080",
+    "port":"64806",
     "protocol":"http",
     "name":"Service",
     "stubs":[
@@ -12,7 +12,7 @@
                 "predicates":[ <% include success/request_predicates_alpha.ejs %> ]
             <% } %>
             ,
-            "responses":[ <% include success/request_responses.ejs %> ]
+            "responses":[ <% include success/request_success_responses.ejs %> ]
         },
         {
             "predicates":[ <% include fail/request_bad_request_predicates.ejs %> ],
