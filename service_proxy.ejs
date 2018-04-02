@@ -1,0 +1,18 @@
+{
+    <% if(process.env['ENV'] == 'ALPHA') { %>
+        "proxy": {
+          "to": "http://alpha.com",
+          "mode": "proxyAlways"
+        }
+    <% } else if(process.env['ENV'] == 'STAGING') { %>
+        "proxy": {
+          "to": "http://staging.com",
+          "mode": "proxyAlways"
+        }
+    <% } else { %>
+        "proxy": {
+          "to":   "http://alpha.com",
+          "mode": "proxyAlways"
+        }
+    <% } %>
+}

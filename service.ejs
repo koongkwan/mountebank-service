@@ -1,0 +1,25 @@
+{
+    "port":"8080",
+    "protocol":"http",
+    "name":"Service",
+    "stubs":[
+        {
+            <% if(process.env['ENV'] == 'ALPHA') { %>
+                "predicates":[ <% include success/request_predicates_alpha.ejs %> ]
+            <% } else if(process.env['ENV'] == 'STAGING') { %>
+                "predicates":[ <% include success/request_predicates_staging.ejs %> ]
+            <% } else { %>
+                "predicates":[ <% include success/request_predicates_alpha.ejs %> ]
+            <% } %>
+            ,
+            "responses":[ <% include success/request_responses.ejs %> ]
+        },
+        {
+            "predicates":[ <% include fail/request_bad_request_predicates.ejs %> ],
+            "responses":[ <% include fail/request_bad_request_responses.ejs %> ]
+        },
+        {
+            "responses":[ <% include service_proxy.ejs %> ]
+        }
+    ]
+}
