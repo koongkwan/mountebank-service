@@ -1,9 +1,16 @@
 {
-    "and": [
+    "or": [
         {
             "equals": {
                 "path": "/test/success",
                 "method": "GET"
+            }
+        },
+        {
+            "equals": {
+                "path": "/test/success",
+                "method": "POST",
+                "headers":{"Content-Type":"application/json"}
             }
         }
     ]
