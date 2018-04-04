@@ -1,4 +1,6 @@
 # mountebank-service
+npm install -g mountebank
+
 run ./start_mb.sh
 
 GET: http://localhost:4545/test/success
