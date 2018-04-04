@@ -43,3 +43,17 @@ response:
     "data": []
 }
 ```
+```
+POST: http://localhost:4545/test/success
+{
+    "headers":{"Content-Type":"application/json"}
+}
+
+"statusCode": 200
+response:
+{
+    "status": "success",
+    "message": "",
+    "data": []
+}
+```
