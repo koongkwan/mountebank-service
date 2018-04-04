@@ -5,8 +5,8 @@
 
 ```
 GET: http://localhost:4545/test/success
-response:
 "statusCode": 200
+response:
 {
     "status": "success",
     "message": "",
