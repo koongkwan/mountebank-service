@@ -1,8 +1,9 @@
 # mountebank-service
-npm install -g mountebank
+- npm install -g mountebank
 
-run ./start_mb.sh
+- run ./start_mb.sh
 
+`
 GET: http://localhost:4545/test/success
 response:
 "statusCode": 200
@@ -11,7 +12,7 @@ response:
     "message": "",
     "data": []
 }
-
+`
 GET: http://localhost:4545/test/fail
 "statusCode": 200
 response:
