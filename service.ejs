@@ -4,14 +4,7 @@
     "name":"Service",
     "stubs":[
         {
-            <% if(process.env['ENV'] == 'ALPHA') { %>
-                "predicates":[ <% include success/request_predicates_alpha.ejs %> ]
-            <% } else if(process.env['ENV'] == 'STAGING') { %>
-                "predicates":[ <% include success/request_predicates_staging.ejs %> ]
-            <% } else { %>
-                "predicates":[ <% include success/request_predicates_alpha.ejs %> ]
-            <% } %>
-            ,
+            "predicates":[ <% include success/request_predicates.ejs %> ],
             "responses":[ <% include success/request_success_responses.ejs %> ]
         },
         {
