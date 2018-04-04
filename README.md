@@ -3,7 +3,7 @@
 
 - run ./start_mb.sh
 
-`
+```
 GET: http://localhost:4545/test/success
 response:
 "statusCode": 200
@@ -12,7 +12,8 @@ response:
     "message": "",
     "data": []
 }
-`
+```
+```
 GET: http://localhost:4545/test/fail
 "statusCode": 200
 response:
@@ -21,7 +22,8 @@ response:
     "message": "",
     "data": []
 }
-
+```
+```
 GET: http://localhost:4545/test/fail/400
 "statusCode": 400
 response:
@@ -30,7 +32,8 @@ response:
     "message": "bad request",
     "data": []
 }
-
+```
+```
 GET: http://localhost:4545/test/fail/500
 "statusCode": 500
 response:
@@ -39,3 +42,4 @@ response:
     "message": "internal server error",
     "data": []
 }
+```
