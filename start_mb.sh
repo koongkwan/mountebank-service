@@ -1,1 +1,1 @@
-mb --configfile ./imposters.ejs --allowInjection --loglevel debug
+mb --configfile ./imposters.ejs --allowInjection --loglevel debug --debug
